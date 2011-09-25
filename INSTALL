@@ -1,0 +1,67 @@
+Installation instructions
+=========================
+
+mkautoflint does not itself provide any C source code. It simply
+prepares the flint source tree to be compiled with the help of
+autotools.
+
+mkautoflint need flint as a subdirectory inside its tree. Say
+
+  git clone http://selmer.warwick.ac.uk/flint2.git flint
+
+or
+
+  ln -s /path/to/your/flint/git/working/dir flint
+
+In case you have a dirty flint directory, then first call
+
+  cd flint
+  git reset --hard   # reset your working directory to match HEAD
+  git clean -df      # remove all files that are *not* in the git repo
+
+but note that these commands are very dangerous, since they might
+remove files that are important to you. It's always a good idea to
+save your current status of your work into a git branch.
+
+Then simply call
+
+  ./mkautoflint.sh
+
+The above script might install appropriate versions of autoconf,
+automake, and libtools into a directory "autotools" of the mkautoflint
+working directory.
+
+Now compilation of flint is available with the usual commands.
+
+  cd flint
+  ./configure
+  make
+  make install
+
+Type
+
+  ./configure --help
+
+to learn more about the options available.
+In particular, you can specify the place of the MPIR and MPFR
+directories via
+
+  ./configure --with-mpir=/path/to/mpir --with-mpfr=/path/to/mpfr
+
+For example, if mpir is installed in /opt/mpir/include and /opt/mpir/lib,
+then you should call
+
+  ./configure --with-mpir=/opt/mpir
+
+mkautoflint does not currently support development of flint.
+Actually, it does. One wouldn't have to re-execute the mkauto-flint.sh
+script. It would be enough to modify the files inside the src or include
+directories and rerun
+
+  bash generate-rules.sh
+  bash build-setup.sh
+
+See mkautoflint.sh in case build-setup.sh asks you to install autotools.
+
+Ralf Hemmecke
+25-Sep-2011

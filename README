@@ -1,0 +1,23 @@
+mkautoflint
+===========
+
+The project mkautoflint aims at providing autotools support for
+compilation of the flint library (http://www.flintlib.org/).
+
+It is written in the hope that some day the flint developers will
+switch to autotools and thus make mkautoflint obsolete. Until then
+mkautoflint will simply help users of flint to use the full power
+of autotool by simply restructuring the flint source tree a bit and
+providing configure.ac and Makefile.am and a script that generates
+the list of files that is usually needed for automake.
+
+Currently, there is only support to compile the flint library.
+mkautoflint is still somewhat incomplete in the sense that it
+does not yet support testing and profiling.
+I hope (in the near future) to get all the current (original) flint
+build options translated to be used with autotools.
+
+In the hope that this project will be useful for someone...
+
+Ralf Hemmecke
+25-Sep-2011
