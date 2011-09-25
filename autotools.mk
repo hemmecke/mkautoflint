@@ -61,7 +61,7 @@ install:
 	-mkdir download
 	cp Makefile download/Makefile
 	cd download && ${MAKE} autoconf V=2.68
-	cd download && ${MAKE} automake V=1.11
+	cd download && ${MAKE} automake V=1.11.1
 	cd download && ${MAKE} libtool  V=2.4
 	-rm -rf download
 

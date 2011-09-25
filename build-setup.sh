@@ -31,7 +31,7 @@ checkversion() {
   if
     testversion autoreconf "autoreconf (GNU Autoconf) 2.68" &&
     testversion autoconf   "autoconf (GNU Autoconf) 2.68" &&
-    testversion automake   "automake (GNU automake) 1.11" &&
+    testversion automake   "automake (GNU automake) 1.11.1" &&
     testversion libtool    "libtool (GNU libtool) 2.4";
   then
     :
