@@ -60,9 +60,9 @@ autotools:
 install:
 	-mkdir download
 	cp Makefile download/Makefile
-	cd download && ${MAKE} autoconf V=2.68
-	cd download && ${MAKE} automake V=1.11.1
-	cd download && ${MAKE} libtool  V=2.4
+	cd download && ${MAKE} autoconf V=2.69
+	cd download && ${MAKE} automake V=1.14.1
+	cd download && ${MAKE} libtool  V=2.4.3
 	-rm -rf download
 
 # The following targets are executed inside the directory

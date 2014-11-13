@@ -29,10 +29,10 @@ testversion() { test "$2" = "`($1 --version | head -n 1) 2>/dev/null`"; }
 # Check for appropriate versions of autoconf/automake/libtool.
 checkversion() {
   if
-    testversion autoreconf "autoreconf (GNU Autoconf) 2.68" &&
-    testversion autoconf   "autoconf (GNU Autoconf) 2.68" &&
-    testversion automake   "automake (GNU automake) 1.11.1" &&
-    testversion libtool    "libtool (GNU libtool) 2.4";
+    testversion autoreconf "autoreconf (GNU Autoconf) 2.69" &&
+    testversion autoconf   "autoconf (GNU Autoconf) 2.69" &&
+    testversion automake   "automake (GNU automake) 1.14.1" &&
+    testversion libtool    "libtool (GNU libtool) 2.4.3";
   then
     :
   else
